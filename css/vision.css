@@ -6,7 +6,10 @@
   --card-border: #f0f0f0;
   --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
-
+body {
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
 .vm-section {
   padding: 100px 0;
   position: relative;

@@ -122,57 +122,69 @@
     </div>
   </section>
   <!-- ========== ABOUT / VISION / MISSION ========== -->
-<section class="vm-section">
-  <div class="container">
-    <div class="vm-bg-accent"></div>
+  <section class="vm-section">
+    <div class="container">
+      <div class="vm-bg-accent"></div>
 
-    <div class="vm-header">
-      <!-- <p class="vm-label">About Us</p> -->
-      <h2 class="vm-heading">Powering Egypt's Future,<br><span>Reaching the World</span></h2>
-      <p class="vm-intro">ElecTech is a trusted name in Egypt's electrical market, delivering superior energy solutions backed by qualified manpower, advanced manufacturing, and a robust distribution network.</p>
-      <!-- <div class="vm-divider"></div> -->
-    </div>
+      <div class="vm-header">
+        <!-- <p class="vm-label">About Us</p> -->
+        <h2 class="vm-heading">Powering Egypt's Future,<br><span>Reaching the World</span></h2>
+        <p class="vm-intro">ElecTech is a trusted name in Egypt's electrical market, delivering superior energy
+          solutions backed by qualified manpower, advanced manufacturing, and a robust distribution network.</p>
+        <!-- <div class="vm-divider"></div> -->
+      </div>
 
-    <div class="vm-cards">
-      <div class="vm-card">
-        <div class="vm-card-content">
-          <div class="vm-card-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+      <div class="vm-cards">
+        <div class="vm-card">
+          <div class="vm-card-content">
+            <div class="vm-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3" />
+                <path
+                  d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+              </svg>
+            </div>
+            <p class="vm-card-label">Vision</p>
+            <h3 class="vm-card-title">Best in Egypt, Known Across Continents</h3>
+            <p class="vm-card-text">To be recognized as the best quality products and value-added services provider in
+              Egypt while establishing a robust presence in the Middle East and Africa markets by end of 2030.</p>
           </div>
-          <p class="vm-card-label">Vision</p>
-          <h3 class="vm-card-title">Best in Egypt, Known Across Continents</h3>
-          <p class="vm-card-text">To be recognized as the best quality products and value-added services provider in Egypt while establishing a robust presence in the Middle East and Africa markets by end of 2030.</p>
+        </div>
+
+        <div class="vm-card">
+          <div class="vm-card-content">
+            <div class="vm-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+              </svg>
+            </div>
+            <p class="vm-card-label">Mission</p>
+            <h3 class="vm-card-title">Superior Energy Solutions, Every Time</h3>
+            <p class="vm-card-text">We are committed to providing our customers with superior-quality energy solutions.
+              Our diversified experience, trusted brand, and manufacturing facilities are the main drivers behind our
+              excellence.</p>
+          </div>
         </div>
       </div>
 
-      <div class="vm-card">
-        <div class="vm-card-content">
-          <div class="vm-card-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-          </div>
-          <p class="vm-card-label">Mission</p>
-          <h3 class="vm-card-title">Superior Energy Solutions, Every Time</h3>
-          <p class="vm-card-text">We are committed to providing our customers with superior-quality energy solutions. Our diversified experience, trusted brand, and manufacturing facilities are the main drivers behind our excellence.</p>
+      <div class="vm-stats">
+        <div class="vm-stat">
+          <p class="vm-stat-num">2030</p>
+          <p class="vm-stat-desc">Regional expansion<br>target year</p>
+        </div>
+        <div class="vm-stat">
+          <p class="vm-stat-num">ME & Africa</p>
+          <p class="vm-stat-desc">Target markets<br>for growth</p>
+        </div>
+        <div class="vm-stat">
+          <p class="vm-stat-num">#1</p>
+          <p class="vm-stat-desc">Quality & service<br>goal in Egypt</p>
         </div>
       </div>
     </div>
-
-    <div class="vm-stats">
-      <div class="vm-stat">
-        <p class="vm-stat-num">2030</p>
-        <p class="vm-stat-desc">Regional expansion<br>target year</p>
-      </div>
-      <div class="vm-stat">
-        <p class="vm-stat-num">ME & Africa</p>
-        <p class="vm-stat-desc">Target markets<br>for growth</p>
-      </div>
-      <div class="vm-stat">
-        <p class="vm-stat-num">#1</p>
-        <p class="vm-stat-desc">Quality & service<br>goal in Egypt</p>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
   <!-- VLUES -->
   <section style="background-color:#d6d8da;">
@@ -676,6 +688,12 @@
 
     document.querySelectorAll('[data-cues] > *, [data-cue]').forEach(el => cueObserver.observe(el));
 
+    // scroll problem 
+    document.querySelectorAll('*').forEach(el => {
+      if (el.offsetWidth > document.documentElement.offsetWidth) {
+        console.log(el);
+      }
+    });
   </script>
 </body>
 
