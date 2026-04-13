@@ -1,0 +1,82 @@
+h1{
+   padding: 60px 0px  0px 0px;
+   font-size: 4rem;
+}
+.values-section {
+  background: #a9bed2;
+  background: #d6d8da;
+  padding: 80px 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-items: stretch;
+  gap: 40px;
+  /* height: 60vh; */
+  width: 100%;
+  box-sizing: border-box;
+}
+.value-card {
+  display: flex;
+  /* flex-direction: row; */
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  width: 28%;
+  min-width: 220px;
+  padding: 50px 30px 10px 10px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+.value-card:not(:last-child) {
+  border-right: none;
+}
+.value-icon {
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+}
+.value-text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.value-title {
+  font-family: Arial, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #000000;
+  margin: 0;
+  line-height: 1.2;
+}
+.value-desc {
+  font-family: Arial, sans-serif;
+  font-size: 1.2rem;
+  color: #282829;
+  margin: 0;
+  line-height: 1.6;
+}
+@media (max-width: 768px) {
+  h1{
+    font-size: 3rem;
+  }
+  .values-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    gap: 32px;
+  }
+  .values-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    gap: 32px;
+  }
+  .value-card {
+    width: 100%;
+    max-width: 380px;
+    padding: 0;
+  }
+
+}
