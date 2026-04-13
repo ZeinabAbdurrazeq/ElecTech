@@ -2,7 +2,7 @@ body {
   font-family: "Inter", sans-serif;
   overflow-x: hidden;
 }
-.features-section {
+/* .features-section {
   background: #d6d8da;
   background: #a9bed2;
   background: #c0ceda;
@@ -13,6 +13,16 @@ body {
   align-items: stretch;
   gap: 5;
   height: 40vh;
+  width: 100%;
+  box-sizing: border-box;
+} */
+ .features-section {
+  background: #c0ceda;
+  padding: 80px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
   width: 100%;
   box-sizing: border-box;
 }

@@ -1,5 +1,6 @@
 :root {
-  --primary: #bc9318e6;
+  /* --primary: #bc9318e6; */
+  --primary: #bc2318e6;
   --primary-dark: #d1bb61;
   --dark: #151a23;
   --dark-light: #1c2230;
@@ -12,7 +13,11 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 body {
   font-family: "Inter", sans-serif;
   color: #1a1f2e;
@@ -431,7 +436,7 @@ h3 {
 /* footer */
 footer {
   /* background: #b4ece6; */
-  background-color: #D4DADC;
+  background-color: #d4dadc;
 }
 
 .footer-main {
@@ -537,8 +542,8 @@ footer {
   height: 16px;
 }
 footer a {
-    color: #212121 !important;
-    text-decoration: none;
+  color: #212121 !important;
+  text-decoration: none;
 }
 /* .footer-section {
   background: var(--footer-bg);
