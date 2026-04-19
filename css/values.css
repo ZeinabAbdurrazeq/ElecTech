@@ -2,9 +2,9 @@ body {
   font-family: "Inter", sans-serif;
   overflow-x: hidden;
 }
-h1{
-   padding: 60px 0px  0px 0px;
-   font-size: 4rem;
+h1 {
+  padding: 60px 0px 0px 0px;
+  font-size: 4rem;
 }
 .values-section {
   background: #a9bed2;
@@ -61,8 +61,15 @@ h1{
   margin: 0;
   line-height: 1.6;
 }
+.rotate-img {
+  transition:  all  0.4s ease;
+  transform-style: preserve-3d;
+}
+.rotate-img:hover {
+  transform: rotateY(360deg);
+}
 @media (max-width: 768px) {
-  h1{
+  h1 {
     font-size: 3rem;
   }
   .values-section {
@@ -82,5 +89,4 @@ h1{
     max-width: 380px;
     padding: 0;
   }
-
 }
