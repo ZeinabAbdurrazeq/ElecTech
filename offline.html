@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Offline | ElecTech</title>
+  <link rel="icon" type="image/png" href="./resources/logo-removebg-preview.png">
+  <style>
+    :root {
+      --primary-color: #f5b400;
+      --bg-color: #0b0f19;
+      --card-bg: rgba(255, 255, 255, 0.05);
+      --text-color: #ffffff;
+      --text-muted: #94a3b8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Ambient background glow */
+    .glow {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(245, 180, 0, 0.15) 0%, rgba(245, 180, 0, 0) 70%);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .container {
+      position: relative;
+      z-index: 2;
+      background: var(--card-bg);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 24px;
+      padding: 48px 32px;
+      width: 90%;
+      max-width: 480px;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    .logo-wrapper {
+      margin-bottom: 24px;
+    }
+
+    .logo-img {
+      max-height: 80px;
+      filter: drop-shadow(0 0 8px rgba(245, 180, 0, 0.3));
+    }
+
+    .illustration {
+      margin: 32px auto;
+      width: 120px;
+      height: 120px;
+      position: relative;
+    }
+
+    /* SVG Wifi Signal Animation */
+    .offline-svg {
+      width: 100%;
+      height: 100%;
+      stroke: var(--primary-color);
+      stroke-width: 2;
+      stroke-linecap: round;
+      fill: none;
+    }
+
+    .wifi-line {
+      transform-origin: bottom center;
+      animation: pulse 2s infinite ease-in-out;
+    }
+
+    .wifi-dot {
+      fill: var(--primary-color);
+    }
+
+    .wifi-1 { animation-delay: 0.2s; }
+    .wifi-2 { animation-delay: 0.4s; }
+    .wifi-3 { animation-delay: 0.6s; }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.3; transform: scale(0.95); }
+      50% { opacity: 1; transform: scale(1.02); stroke: #ef4444; }
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+    }
+
+    p {
+      color: var(--text-muted);
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--primary-color);
+      color: #000000;
+      font-weight: 600;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: all 0.2s ease-in-out;
+      width: 100%;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      box-shadow: 0 4px 12px rgba(245, 180, 0, 0.2);
+    }
+
+    .btn:hover {
+      background-color: #ffd043;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(245, 180, 0, 0.35);
+    }
+
+    .btn:active {
+      transform: translateY(0);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="glow"></div>
+  <div class="container">
+    <div class="logo-wrapper">
+      <img src="./resources/Minimalist ELECTECH logo design.png" alt="ElecTech Logo" class="logo-img">
+    </div>
+    
+    <div class="illustration">
+      <svg class="offline-svg" viewBox="0 0 24 24">
+        <!-- Wifi Dot -->
+        <circle cx="12" cy="18" r="1.5" class="wifi-dot" />
+        <!-- Wifi Ring 1 -->
+        <path d="M9 15a4.2 4.2 0 0 1 6 0" class="wifi-line wifi-1" />
+        <!-- Wifi Ring 2 -->
+        <path d="M6 12a8.5 8.5 0 0 1 12 0" class="wifi-line wifi-2" />
+        <!-- Wifi Ring 3 -->
+        <path d="M3 9a12.8 12.8 0 0 1 18 0" class="wifi-line wifi-3" />
+        <!-- Warning Line Slash -->
+        <line x1="2" y1="2" x2="22" y2="22" stroke="#ef4444" stroke-width="2" />
+      </svg>
+    </div>
+
+    <h1>Oops! You're Offline</h1>
+    <p>It looks like you don't have an active internet connection. Check your network settings and try reloading the page.</p>
+    
+    <button class="btn" onclick="window.location.reload()">Try Again</button>
+  </div>
+</body>
+</html>

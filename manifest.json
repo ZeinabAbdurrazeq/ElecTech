@@ -1,0 +1,20 @@
+{
+  "name": "ElecTech For Power Industries and Constructions",
+  "short_name": "ElecTech",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#f5b400",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "./resources/icons/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "./resources/icons/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
